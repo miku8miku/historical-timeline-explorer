@@ -1,0 +1,68 @@
+.time-axis-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.time-axis-scroll-area {
+  width: 100%;
+  height: 200px;
+  overflow-x: auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.time-axis-svg {
+  min-width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.event-marker {
+  transition: all 0.3s ease;
+}
+
+.event-marker:hover {
+  z-index: 5;
+}
+
+.event-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+/* 滚动条样式 */
+.time-axis-scroll-area::-webkit-scrollbar {
+  height: 8px;
+}
+
+.time-axis-scroll-area::-webkit-scrollbar-track {
+  background: var(--timeline-bg);
+}
+
+.time-axis-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--timeline-dim);
+  border-radius: 4px;
+}
+
+.time-axis-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--timeline-green);
+}

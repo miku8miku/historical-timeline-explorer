@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --timeline-bg: #0d0d0d;
+  --timeline-green: #33ff33;
+  --timeline-glow: #33ff3388;
+  --timeline-dim: #1a801a;
+  --scan-line: rgba(0, 0, 0, 0.5);
+  font-family: 'VT323', 'Microsoft YaHei', 'SimHei', 'WenQuanYi Micro Hei', monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--timeline-bg);
+  color: var(--timeline-green);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--timeline-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--timeline-dim);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--timeline-green);
+}
+
+::selection {
+  background: var(--timeline-green);
+  color: var(--timeline-bg);
+}

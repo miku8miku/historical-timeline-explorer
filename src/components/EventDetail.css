@@ -1,0 +1,122 @@
+.event-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 13, 13, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.event-detail {
+  width: 80%;
+  max-width: 600px;
+  background-color: var(--timeline-bg);
+  border: 1px solid var(--timeline-green);
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 0 20px var(--timeline-glow);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--timeline-dim);
+  position: relative;
+}
+
+.event-category {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+
+.event-header h2 {
+  flex: 1;
+  margin: 0;
+  color: var(--timeline-green);
+  font-size: 1.8rem;
+}
+
+.event-year {
+  color: var(--timeline-dim);
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  color: var(--timeline-green);
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  color: #fff;
+  background-color: var(--timeline-dim);
+  border-radius: 50%;
+}
+
+.event-content p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.event-context, .event-impact {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(51, 255, 51, 0.05);
+  border-left: 2px solid var(--timeline-green);
+}
+
+.event-context h4, .event-impact h4 {
+  margin-top: 0;
+  color: var(--timeline-green);
+  font-size: 1.2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .event-detail {
+    width: 95%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .event-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .event-year {
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .close-button {
+    position: relative;
+    right: auto;
+    top: auto;
+    align-self: flex-end;
+  }
+}
